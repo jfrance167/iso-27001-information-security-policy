@@ -6,10 +6,16 @@ The template covers policy purpose and scope, information security objectives, m
 
 The document is anonymized for portfolio use. Replace `[Organization Name]` and adapt the policy to the organization’s actual legal, regulatory, contractual, and risk requirements before adoption.
 
+## Security Notice
+
+This repository is an educational policy template. It is not production-ready
+governance, legal advice, or a certification guarantee. It contains no
+intentionally vulnerable code or real credentials. An organization must tailor,
+approve, implement, and periodically review the policy against its own scope,
+risks, obligations, and control environment before use.
+
+Do not deploy or adopt this project as a production policy without that review.
+
 ## File
 
 - `Information Security Policy.docx` — editable Word policy template
-
-## Disclaimer
-
-This sample is for educational and portfolio purposes and is not legal advice or a certification guarantee.
