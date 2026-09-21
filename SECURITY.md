@@ -6,10 +6,12 @@ Only the latest commit on `main` is maintained.
 
 ## Intended use
 
-This repository is an educational policy template, not production-ready
-governance, legal advice, or a certification guarantee. It contains no
-intentionally vulnerable code. Organizations must tailor and approve it for
-their own scope, risks, obligations, and control environment.
+This repository is educational and not production-ready governance, legal
+advice, or a certification guarantee. The Terraform under
+`cloud-iac-security-scanning/terraform/` is intentionally vulnerable and must
+not be deployed. Organizations must remediate the lab and tailor and approve
+the policy template for their own scope, risks, obligations, and control
+environment.
 
 ## Reporting a security issue
 
