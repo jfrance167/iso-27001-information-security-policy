@@ -16,7 +16,10 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run an authorized Nmap vulnerability scan and push the report."
     )
-    parser.add_argument("target", help="IPv4 or IPv6 address to scan")
+    parser.add_argument(
+        "target",
+        help="IPv4/IPv6 address, localhost, or the authorized scanme.nmap.org host",
+    )
     parser.add_argument(
         "--authorized",
         action="store_true",
@@ -24,10 +27,18 @@ def parse_args() -> argparse.Namespace:
     )
     args = parser.parse_args()
 
-    try:
-        args.target = str(ipaddress.ip_address(args.target))
-    except ValueError:
-        parser.error("target must be a valid IPv4 or IPv6 address")
+    normalized_target = args.target.strip().lower().rstrip(".")
+    if normalized_target == "localhost":
+        args.target = "127.0.0.1"
+    elif normalized_target == "scanme.nmap.org":
+        args.target = normalized_target
+    else:
+        try:
+            args.target = str(ipaddress.ip_address(normalized_target))
+        except ValueError:
+            parser.error(
+                "target must be an IP address, localhost, or scanme.nmap.org"
+            )
 
     if not args.authorized:
         parser.error("--authorized is required; scan only systems you may test")
@@ -60,7 +71,10 @@ def main() -> int:
         return 1
 
     report_dir.mkdir(parents=True, exist_ok=True)
-    scan_command = ["nmap", "-sV", "--script", "vuln", args.target]
+    # Restrict NSE checks to scripts categorized as both vulnerability checks and
+    # safe. This respects scanme.nmap.org's ban on exploit and denial-of-service
+    # testing while still producing a lightweight vulnerability-oriented report.
+    scan_command = ["nmap", "-sV", "--script", "vuln and safe", args.target]
 
     try:
         scan = subprocess.run(
