@@ -104,11 +104,17 @@ def main() -> int:
         # Stage only this run's report so unrelated working-tree files are untouched.
         run_git(repo, "add", "--", relative_report.as_posix())
         run_git(repo, "commit", "-m", "Automated scan report", "--", relative_report.as_posix())
-        run_git(repo, "push")
+        branch = run_git(repo, "branch", "--show-current").stdout.strip()
+        if not branch:
+            raise RuntimeError("cannot push a report from a detached Git HEAD")
+        run_git(repo, "push", "origin", branch)
     except subprocess.CalledProcessError as exc:
         command = " ".join(str(part) for part in exc.cmd)
         details = (exc.stderr or exc.stdout or "No error output").strip()
         print(f"Error: command failed: {command}\n{details}", file=sys.stderr)
+        return 1
+    except RuntimeError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
         return 1
 
     print("Report committed and pushed successfully.")
