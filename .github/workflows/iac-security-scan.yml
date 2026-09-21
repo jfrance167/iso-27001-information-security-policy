@@ -1,0 +1,42 @@
+name: Terraform IaC security scan
+
+on:
+  push:
+    paths:
+      - "cloud-iac-security-scanning/terraform/**"
+      - "cloud-iac-security-scanning/trivy.yaml"
+      - ".github/workflows/iac-security-scan.yml"
+  pull_request:
+    paths:
+      - "cloud-iac-security-scanning/terraform/**"
+      - "cloud-iac-security-scanning/trivy.yaml"
+      - ".github/workflows/iac-security-scan.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iac-security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  trivy-config:
+    name: Block high and critical IaC findings
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Scan Terraform with Trivy
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: config
+          scan-ref: cloud-iac-security-scanning/terraform
+          trivy-config: cloud-iac-security-scanning/trivy.yaml
+          version: v0.74.0
+          hide-progress: true
