@@ -38,5 +38,9 @@ jobs:
           scan-type: config
           scan-ref: cloud-iac-security-scanning/terraform
           trivy-config: cloud-iac-security-scanning/trivy.yaml
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: 1
+          format: table
           version: v0.74.0
           hide-progress: true

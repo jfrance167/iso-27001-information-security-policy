@@ -1,10 +1,10 @@
-# WARNING: This file is intentionally vulnerable and must not be deployed.
+# Hardened remediation target for the IaC security-scanning lab.
 
 resource "aws_s3_bucket" "public_demo" {
   bucket = var.bucket_name
 
   tags = {
-    Name        = "intentionally-vulnerable-demo"
+    Name        = "secure-iac-demo"
     Environment = "training-only"
   }
 }
@@ -26,38 +26,57 @@ resource "aws_s3_bucket_public_access_block" "public_demo" {
   restrict_public_buckets = true
 }
 
-resource "aws_security_group" "open_admin" {
-  name        = "intentionally-open-admin-access"
-  description = "Training-only security group with unrestricted admin ports"
+resource "aws_kms_key" "s3" {
+  description             = "Customer-managed key for the IaC demo S3 bucket"
+  deletion_window_in_days = 30
+  enable_key_rotation     = true
 
-  # Intentionally unsafe: SSH is exposed to the entire internet.
+  tags = {
+    Name        = "secure-iac-demo-s3"
+    Environment = "training-only"
+  }
+}
+
+resource "aws_kms_alias" "s3" {
+  name          = "alias/secure-iac-demo-s3"
+  target_key_id = aws_kms_key.s3.key_id
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "public_demo" {
+  bucket = aws_s3_bucket.public_demo.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      kms_master_key_id = aws_kms_key.s3.arn
+      sse_algorithm     = "aws:kms"
+    }
+
+    bucket_key_enabled = true
+  }
+}
+
+resource "aws_security_group" "admin_access" {
+  name        = "restricted-admin-access"
+  description = "Training-only security group restricted to a trusted network"
+
   ingress {
-    description = "Unrestricted SSH"
+    description = "SSH from trusted network"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.trusted_admin_cidr]
   }
 
-  # Intentionally unsafe: RDP is exposed to the entire internet.
   ingress {
-    description = "Unrestricted RDP"
+    description = "RDP from trusted network"
     from_port   = 3389
     to_port     = 3389
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    description = "Unrestricted outbound traffic"
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.trusted_admin_cidr]
   }
 
   tags = {
-    Name        = "intentionally-vulnerable-demo"
+    Name        = "restricted-admin-access"
     Environment = "training-only"
   }
 }
