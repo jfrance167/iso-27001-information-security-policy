@@ -1,0 +1,1 @@
+The Caesar cipher is useful for learning, but it is not secure for real secrets.

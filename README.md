@@ -5,6 +5,7 @@ This repository contains hands-on defensive security projects and a generic info
 ## Featured lab
 
 - [Cloud IaC Security Scanning](cloud-iac-security-scanning/README.md) — intentionally vulnerable AWS Terraform protected by a Trivy security gate in GitHub Actions
+- [Caesar Cipher Cryptanalysis Lab](caesar-cipher-cryptanalysis-lab/README.md) — file-based encryption, exhaustive key search, frequency analysis, tests, and a complete experimental report
 
 ## Policy template
 
