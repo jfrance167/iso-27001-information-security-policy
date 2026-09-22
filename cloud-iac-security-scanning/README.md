@@ -2,7 +2,7 @@
 
 [![Terraform IaC security scan](https://github.com/jfrance167/iso-27001-information-security-policy/actions/workflows/iac-security-scan.yml/badge.svg)](https://github.com/jfrance167/iso-27001-information-security-policy/actions/workflows/iac-security-scan.yml)
 
-This portfolio lab demonstrates a shift-left security control for AWS infrastructure as code. The Terraform is intentionally misconfigured, and Trivy blocks it before any deployment step can run.
+This portfolio lab demonstrates a shift-left security control for AWS infrastructure as code. The S3 public-access findings have been remediated, while the remaining intentional misconfigurations show Trivy blocking unsafe changes before any deployment step can run.
 
 > [!CAUTION]
 > The files under `terraform/` are deliberately vulnerable. Do not run `terraform apply`. No AWS credentials are needed to scan this lab.
@@ -11,8 +11,6 @@ This portfolio lab demonstrates a shift-left security control for AWS infrastruc
 
 | Resource | Misconfiguration | Risk |
 | --- | --- | --- |
-| S3 bucket | Public ACL and all four public-access safeguards disabled | Anonymous data exposure |
-| S3 bucket policy | Wildcard principal can read every object | Public data disclosure |
 | S3 bucket | Encryption, access logging, and versioning omitted | Reduced confidentiality, monitoring, and recovery |
 | Security group | SSH (`22`) open to `0.0.0.0/0` | Internet-wide administrative access |
 | Security group | RDP (`3389`) open to `0.0.0.0/0` | Internet-wide administrative access |
@@ -48,32 +46,31 @@ Or with an installed Trivy binary:
 trivy config --config cloud-iac-security-scanning/trivy.yaml cloud-iac-security-scanning/terraform
 ```
 
-Expected result: Trivy 0.74 reports nine blocking findings (eight `HIGH` and one `CRITICAL`), then returns exit code `1`:
+Expected result: Trivy 0.74 reports four remaining blocking findings (three `HIGH` and one `CRITICAL`), then returns exit code `1`:
 
 | Trivy check | Severity | Observed finding |
 | --- | --- | --- |
-| `AWS-0086`, `AWS-0087`, `AWS-0091`, `AWS-0093` | High | S3 public-access protections disabled |
-| `AWS-0092` | High | Public-read bucket ACL |
 | `AWS-0107` (twice) | High | SSH and RDP exposed to the internet |
 | `AWS-0104` | Critical | Unrestricted security-group egress |
 | `AWS-0132` | High | No customer-managed encryption key |
+
+The S3 ACL/public-access remediation removed `AWS-0086`, `AWS-0087`, `AWS-0091`, `AWS-0092`, and `AWS-0093` without suppressing any checks. The bucket now uses `BucketOwnerEnforced`, has no ACL or public bucket policy, and enables all four S3 public-access-block settings.
 
 ## Remediation exercise
 
 To turn the failing gate green:
 
-1. Remove the public ACL and wildcard bucket policy.
-2. Set every S3 public-access-block option to `true`.
-3. Enable bucket encryption, logging, and versioning.
-4. Restrict SSH/RDP ingress to a documented trusted CIDR, or remove those rules.
-5. Restrict egress to only required destinations and ports.
-6. Run the local scan again and open a pull request with the clean result.
+1. Enable bucket encryption with a customer-managed KMS key, logging, and versioning.
+2. Restrict SSH/RDP ingress to a documented trusted CIDR, or remove those rules.
+3. Restrict egress to only required destinations and ports.
+4. Run the local scan again and open a pull request with the clean result.
 
 ## Repository layout
 
 ```text
 cloud-iac-security-scanning/
 ├── terraform/
+│   ├── .terraform.lock.hcl
 │   ├── main.tf
 │   ├── variables.tf
 │   └── versions.tf
