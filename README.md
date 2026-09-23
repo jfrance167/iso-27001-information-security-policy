@@ -16,6 +16,10 @@ risks, obligations, and control environment before use.
 
 Do not deploy or adopt this project as a production policy without that review.
 
+## Security lab
+
+- [Password Security Lab](password-security-lab/README.md) — exponential search-space analysis, four bounded synthetic guessing strategies, tests, and a complete experimental report
+
 ## File
 
 - `Information Security Policy.docx` — editable Word policy template
