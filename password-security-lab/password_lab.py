@@ -331,10 +331,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         raise SystemExit("--iterations must be positive")
     results = demo_results(args.iterations)
     if args.json:
-        print(json.dumps([asdict(result) for result in results], indent=2))
+        output_rows = []
+        for result in results:
+            row = asdict(result)
+            row["password"] = "[REDACTED]" if result.found else None
+            output_rows.append(row)
+        print(json.dumps(output_rows, indent=2))
     else:
         for result in results:
-            state = f"found {result.password!r}" if result.found else "not found"
+            state = "found [REDACTED]" if result.found else "not found"
             print(
                 f"{result.method:22} {state:24} guesses={result.guesses:6d} "
                 f"seconds={result.elapsed_seconds:.6f}"

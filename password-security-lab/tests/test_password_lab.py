@@ -105,6 +105,8 @@ class CommandLineTests(unittest.TestCase):
         results = json.loads(output.getvalue())
         self.assertEqual(len(results), 4)
         self.assertTrue(all(item["found"] for item in results))
+        self.assertTrue(all(item["password"] == "[REDACTED]" for item in results))
+        self.assertNotIn("Sunshine", output.getvalue())
 
 
 if __name__ == "__main__":
