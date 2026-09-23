@@ -19,6 +19,7 @@ Do not deploy or adopt this project as a production policy without that review.
 ## Security lab
 
 - [Password Security Lab](password-security-lab/README.md) — exponential search-space analysis, four bounded synthetic guessing strategies, tests, and a complete experimental report
+- [Deleted-File Forensics Lab](deleted-file-forensics-lab/README.md) — safe cluster-storage simulation, signature carving, SHA-256 recovery validation, 450 measured trials, and a complete experimental report
 
 ## File
 

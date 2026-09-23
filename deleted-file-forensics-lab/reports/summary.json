@@ -1,0 +1,62 @@
+[
+  {
+    "scenario": "emptied-recycle-bin",
+    "overwrite_fraction": 0.0,
+    "trials": 75,
+    "recovered_files": 75,
+    "exact_files": 75,
+    "recovery_rate": 1.0,
+    "exact_recovery_rate": 1.0,
+    "mean_matching_byte_ratio": 1.0
+  },
+  {
+    "scenario": "recycle-bin",
+    "overwrite_fraction": 0.0,
+    "trials": 75,
+    "recovered_files": 75,
+    "exact_files": 75,
+    "recovery_rate": 1.0,
+    "exact_recovery_rate": 1.0,
+    "mean_matching_byte_ratio": 1.0
+  },
+  {
+    "scenario": "overwritten",
+    "overwrite_fraction": 0.25,
+    "trials": 75,
+    "recovered_files": 50,
+    "exact_files": 0,
+    "recovery_rate": 0.6666666666666666,
+    "exact_recovery_rate": 0.0,
+    "mean_matching_byte_ratio": 0.4764453125
+  },
+  {
+    "scenario": "overwritten",
+    "overwrite_fraction": 0.5,
+    "trials": 75,
+    "recovered_files": 37,
+    "exact_files": 0,
+    "recovery_rate": 0.49333333333333335,
+    "exact_recovery_rate": 0.0,
+    "mean_matching_byte_ratio": 0.22905381944444442
+  },
+  {
+    "scenario": "overwritten",
+    "overwrite_fraction": 0.75,
+    "trials": 75,
+    "recovered_files": 21,
+    "exact_files": 0,
+    "recovery_rate": 0.28,
+    "exact_recovery_rate": 0.0,
+    "mean_matching_byte_ratio": 0.063544921875
+  },
+  {
+    "scenario": "overwritten",
+    "overwrite_fraction": 1.0,
+    "trials": 75,
+    "recovered_files": 0,
+    "exact_files": 0,
+    "recovery_rate": 0.0,
+    "exact_recovery_rate": 0.0,
+    "mean_matching_byte_ratio": 0.0
+  }
+]
