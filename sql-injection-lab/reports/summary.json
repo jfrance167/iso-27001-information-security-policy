@@ -1,0 +1,68 @@
+[
+  {
+    "scenario": "valid_credentials",
+    "trials": 100,
+    "legacy_authentication_rate": 1.0,
+    "secure_authentication_rate": 1.0,
+    "legacy_unauthorized_access_rate": 0.0,
+    "secure_unauthorized_access_rate": 0.0,
+    "legacy_mean_rows_exposed": 1.0,
+    "secure_mean_rows_exposed": 1.0,
+    "database_integrity_rate": 1.0
+  },
+  {
+    "scenario": "wrong_password",
+    "trials": 100,
+    "legacy_authentication_rate": 0.0,
+    "secure_authentication_rate": 0.0,
+    "legacy_unauthorized_access_rate": 0.0,
+    "secure_unauthorized_access_rate": 0.0,
+    "legacy_mean_rows_exposed": 0.0,
+    "secure_mean_rows_exposed": 0.0,
+    "database_integrity_rate": 1.0
+  },
+  {
+    "scenario": "username_tautology",
+    "trials": 100,
+    "legacy_authentication_rate": 1.0,
+    "secure_authentication_rate": 0.0,
+    "legacy_unauthorized_access_rate": 1.0,
+    "secure_unauthorized_access_rate": 0.0,
+    "legacy_mean_rows_exposed": 1.0,
+    "secure_mean_rows_exposed": 0.0,
+    "database_integrity_rate": 1.0
+  },
+  {
+    "scenario": "password_tautology",
+    "trials": 100,
+    "legacy_authentication_rate": 1.0,
+    "secure_authentication_rate": 0.0,
+    "legacy_unauthorized_access_rate": 1.0,
+    "secure_unauthorized_access_rate": 0.0,
+    "legacy_mean_rows_exposed": 1.0,
+    "secure_mean_rows_exposed": 0.0,
+    "database_integrity_rate": 1.0
+  },
+  {
+    "scenario": "comment_bypass",
+    "trials": 100,
+    "legacy_authentication_rate": 1.0,
+    "secure_authentication_rate": 0.0,
+    "legacy_unauthorized_access_rate": 1.0,
+    "secure_unauthorized_access_rate": 0.0,
+    "legacy_mean_rows_exposed": 1.0,
+    "secure_mean_rows_exposed": 0.0,
+    "database_integrity_rate": 1.0
+  },
+  {
+    "scenario": "union_exposure",
+    "trials": 100,
+    "legacy_authentication_rate": 0.0,
+    "secure_authentication_rate": 0.0,
+    "legacy_unauthorized_access_rate": 0.0,
+    "secure_unauthorized_access_rate": 0.0,
+    "legacy_mean_rows_exposed": 25.0,
+    "secure_mean_rows_exposed": 0.0,
+    "database_integrity_rate": 1.0
+  }
+]
