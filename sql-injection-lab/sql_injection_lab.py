@@ -56,7 +56,6 @@ class TrialResult:
     scenario: str
     repetition: int
     target_user: str
-    payload_sha256: str
     authorized_attempt: bool
     legacy_authenticated: bool
     secure_authenticated: bool
@@ -130,9 +129,6 @@ def legacy_query_plan(attempt: Attempt) -> dict[str, object]:
         "operation": "look up a user by supplied username and password",
         "binding_strategy": "legacy string interpolation (modeled only)",
         "scenario": attempt.scenario,
-        "input_digest": hashlib.sha256(
-            f"{attempt.supplied_username}\0{attempt.supplied_password}".encode("utf-8")
-        ).hexdigest(),
         "executed": False,
     }
 
@@ -195,13 +191,10 @@ def run_trial(
     else:
         secure_rows = int(secure_authenticated)
     database_intact = connection.execute(COUNT_QUERY).fetchone()[0] == user_count
-    payload_sha256 = str(legacy_query_plan(attempt)["input_digest"])
-
     return TrialResult(
         scenario=scenario,
         repetition=repetition,
         target_user=user.username,
-        payload_sha256=payload_sha256,
         authorized_attempt=attempt.authorized_attempt,
         legacy_authenticated=legacy_authenticated,
         secure_authenticated=secure_authenticated,
@@ -277,7 +270,11 @@ def write_results(path: str | Path, results: Sequence[TrialResult]) -> None:
     output = Path(path)
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(TrialResult.__dataclass_fields__))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(TrialResult.__dataclass_fields__),
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(asdict(result) for result in results)
 

@@ -23,7 +23,7 @@ authentication service.
 - The legacy path is a bounded behavioral model; it does not execute SQL.
 - The real SQLite path accepts input only through parameter placeholders.
 - The database exists only in memory and contains synthetic `.invalid` records.
-- Reports store scenario labels and SHA-256 input digests, not payloads or
+- Reports store scenario labels and outcomes, not supplied payloads or
   passwords.
 
 Report unexpected security behavior through the repository's root security
