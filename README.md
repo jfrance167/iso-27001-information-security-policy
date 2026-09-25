@@ -19,6 +19,7 @@ Do not deploy or adopt this project as a production policy without that review.
 ## Security lab
 
 - [Password Security Lab](password-security-lab/README.md) — exponential search-space analysis, four bounded synthetic guessing strategies, tests, and a complete experimental report
+- [Password Reuse Survey Lab](password-reuse-lab/README.md) — privacy-safe synthetic survey, normalized reuse analysis, human-subject safeguards, 120 simulated respondents, tests, and a complete report
 - [Deleted-File Forensics Lab](deleted-file-forensics-lab/README.md) — safe cluster-storage simulation, signature carving, SHA-256 recovery validation, 450 measured trials, and a complete experimental report
 - [Optical Air-Gap Security Lab](air-gap-optical-lab/README.md) — safe display-to-camera channel simulation, CRC validation, 1,350 reproducible trials, and a complete experimental report
 - [SQL Injection Prevention Lab](sql-injection-lab/README.md) — local SQLite parameterization experiment, bounded legacy-behavior model, 600 reproducible trials, tests, and a complete report
