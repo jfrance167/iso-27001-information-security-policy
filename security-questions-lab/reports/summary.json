@@ -1,0 +1,163 @@
+{
+  "notice": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+  "method": "deterministic fictional-profile simulation; no OSINT performed",
+  "question_rankings": [
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "current_employer",
+      "participant_count": 200,
+      "expected_yes_found_yes": 106,
+      "expected_yes_found_no": 21,
+      "expected_no_found_yes": 54,
+      "expected_no_found_no": 19,
+      "expected_online_rate": 0.635,
+      "found_online_rate": 0.8,
+      "correct_answer_found_rate": 0.765,
+      "unexpected_exposure_rate": 0.27,
+      "expectation_gap": 0.165
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "high_school",
+      "participant_count": 200,
+      "expected_yes_found_yes": 69,
+      "expected_yes_found_no": 34,
+      "expected_no_found_yes": 78,
+      "expected_no_found_no": 19,
+      "expected_online_rate": 0.515,
+      "found_online_rate": 0.735,
+      "correct_answer_found_rate": 0.65,
+      "unexpected_exposure_rate": 0.39,
+      "expectation_gap": 0.22
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "birth_city",
+      "participant_count": 200,
+      "expected_yes_found_yes": 69,
+      "expected_yes_found_no": 35,
+      "expected_no_found_yes": 61,
+      "expected_no_found_no": 35,
+      "expected_online_rate": 0.52,
+      "found_online_rate": 0.65,
+      "correct_answer_found_rate": 0.56,
+      "unexpected_exposure_rate": 0.305,
+      "expectation_gap": 0.13
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "mothers_maiden_name",
+      "participant_count": 200,
+      "expected_yes_found_yes": 22,
+      "expected_yes_found_no": 22,
+      "expected_no_found_yes": 70,
+      "expected_no_found_no": 86,
+      "expected_online_rate": 0.22,
+      "found_online_rate": 0.46,
+      "correct_answer_found_rate": 0.41,
+      "unexpected_exposure_rate": 0.35,
+      "expectation_gap": 0.24
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "wedding_location",
+      "participant_count": 200,
+      "expected_yes_found_yes": 15,
+      "expected_yes_found_no": 38,
+      "expected_no_found_yes": 64,
+      "expected_no_found_no": 83,
+      "expected_online_rate": 0.265,
+      "found_online_rate": 0.395,
+      "correct_answer_found_rate": 0.355,
+      "unexpected_exposure_rate": 0.32,
+      "expectation_gap": 0.13
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "first_pet_name",
+      "participant_count": 200,
+      "expected_yes_found_yes": 12,
+      "expected_yes_found_no": 27,
+      "expected_no_found_yes": 74,
+      "expected_no_found_no": 87,
+      "expected_online_rate": 0.195,
+      "found_online_rate": 0.43,
+      "correct_answer_found_rate": 0.345,
+      "unexpected_exposure_rate": 0.37,
+      "expectation_gap": 0.235
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "favorite_sports_team",
+      "participant_count": 200,
+      "expected_yes_found_yes": 17,
+      "expected_yes_found_no": 42,
+      "expected_no_found_yes": 44,
+      "expected_no_found_no": 97,
+      "expected_online_rate": 0.295,
+      "found_online_rate": 0.305,
+      "correct_answer_found_rate": 0.21,
+      "unexpected_exposure_rate": 0.22,
+      "expectation_gap": 0.01
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "street_grew_up_on",
+      "participant_count": 200,
+      "expected_yes_found_yes": 13,
+      "expected_yes_found_no": 27,
+      "expected_no_found_yes": 54,
+      "expected_no_found_no": 106,
+      "expected_online_rate": 0.2,
+      "found_online_rate": 0.335,
+      "correct_answer_found_rate": 0.21,
+      "unexpected_exposure_rate": 0.27,
+      "expectation_gap": 0.135
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "first_car_model",
+      "participant_count": 200,
+      "expected_yes_found_yes": 21,
+      "expected_yes_found_no": 21,
+      "expected_no_found_yes": 36,
+      "expected_no_found_no": 122,
+      "expected_online_rate": 0.21,
+      "found_online_rate": 0.285,
+      "correct_answer_found_rate": 0.185,
+      "unexpected_exposure_rate": 0.18,
+      "expectation_gap": 0.075
+    },
+    {
+      "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+      "question": "favorite_food",
+      "participant_count": 200,
+      "expected_yes_found_yes": 4,
+      "expected_yes_found_no": 17,
+      "expected_no_found_yes": 25,
+      "expected_no_found_no": 154,
+      "expected_online_rate": 0.105,
+      "found_online_rate": 0.145,
+      "correct_answer_found_rate": 0.1,
+      "unexpected_exposure_rate": 0.125,
+      "expectation_gap": 0.04
+    }
+  ],
+  "recovery_portfolio_risk": {
+    "data_classification": "SYNTHETIC DATA - NO REAL PEOPLE OR RECOVERY ANSWERS",
+    "participant_count": 200,
+    "least_secure_questions": [
+      "current_employer",
+      "high_school",
+      "birth_city"
+    ],
+    "least_secure_all_three_known_rate": 0.275,
+    "most_secure_questions": [
+      "street_grew_up_on",
+      "first_car_model",
+      "favorite_food"
+    ],
+    "most_secure_all_three_known_rate": 0.005,
+    "warning": "Illustrative exposure metric only; no authentication was attempted."
+  }
+}
