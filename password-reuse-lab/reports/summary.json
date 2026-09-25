@@ -1,0 +1,140 @@
+{
+  "notice": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+  "method": "deterministic synthetic survey simulation",
+  "overall": {
+    "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+    "respondent_count": 120,
+    "mean_account_count": 13.408,
+    "mean_distinct_password_groups": 8.95,
+    "mean_normalized_password_diversity": 0.6722,
+    "mean_reused_account_pair_rate": 0.1329,
+    "mean_largest_exposure_cascade": 3.933
+  },
+  "distinct_password_group_histogram": [
+    {
+      "distinct_password_groups": 1,
+      "respondent_count": 2
+    },
+    {
+      "distinct_password_groups": 2,
+      "respondent_count": 1
+    },
+    {
+      "distinct_password_groups": 3,
+      "respondent_count": 3
+    },
+    {
+      "distinct_password_groups": 4,
+      "respondent_count": 6
+    },
+    {
+      "distinct_password_groups": 5,
+      "respondent_count": 13
+    },
+    {
+      "distinct_password_groups": 6,
+      "respondent_count": 4
+    },
+    {
+      "distinct_password_groups": 7,
+      "respondent_count": 11
+    },
+    {
+      "distinct_password_groups": 8,
+      "respondent_count": 10
+    },
+    {
+      "distinct_password_groups": 9,
+      "respondent_count": 12
+    },
+    {
+      "distinct_password_groups": 10,
+      "respondent_count": 14
+    },
+    {
+      "distinct_password_groups": 11,
+      "respondent_count": 16
+    },
+    {
+      "distinct_password_groups": 12,
+      "respondent_count": 9
+    },
+    {
+      "distinct_password_groups": 13,
+      "respondent_count": 11
+    },
+    {
+      "distinct_password_groups": 14,
+      "respondent_count": 4
+    },
+    {
+      "distinct_password_groups": 15,
+      "respondent_count": 4
+    }
+  ],
+  "categories": [
+    {
+      "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+      "category": "device",
+      "eligible_respondents": 89,
+      "all_same_count": 26,
+      "all_different_count": 63,
+      "mixed_count": 0,
+      "mean_pair_reuse_rate": 0.2921
+    },
+    {
+      "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+      "category": "email",
+      "eligible_respondents": 74,
+      "all_same_count": 24,
+      "all_different_count": 50,
+      "mixed_count": 0,
+      "mean_pair_reuse_rate": 0.3243
+    },
+    {
+      "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+      "category": "entertainment",
+      "eligible_respondents": 104,
+      "all_same_count": 21,
+      "all_different_count": 60,
+      "mixed_count": 23,
+      "mean_pair_reuse_rate": 0.2756
+    },
+    {
+      "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+      "category": "finance",
+      "eligible_respondents": 63,
+      "all_same_count": 15,
+      "all_different_count": 48,
+      "mixed_count": 0,
+      "mean_pair_reuse_rate": 0.2381
+    },
+    {
+      "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+      "category": "shopping",
+      "eligible_respondents": 63,
+      "all_same_count": 16,
+      "all_different_count": 47,
+      "mixed_count": 0,
+      "mean_pair_reuse_rate": 0.254
+    },
+    {
+      "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+      "category": "social",
+      "eligible_respondents": 112,
+      "all_same_count": 23,
+      "all_different_count": 61,
+      "mixed_count": 28,
+      "mean_pair_reuse_rate": 0.2887
+    },
+    {
+      "data_classification": "SYNTHETIC SURVEY DATA - NO HUMAN PASSWORDS OR RESPONSES",
+      "category": "work_school",
+      "eligible_respondents": 108,
+      "all_same_count": 24,
+      "all_different_count": 61,
+      "mixed_count": 23,
+      "mean_pair_reuse_rate": 0.2932
+    }
+  ]
+}
