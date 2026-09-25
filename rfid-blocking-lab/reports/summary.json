@@ -1,0 +1,271 @@
+{
+  "notice": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+  "model": "illustrative near-field inverse-sixth-power coupling model",
+  "reliable_read_threshold": 0.8,
+  "results": [
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "aluminum_foil",
+      "category": "solid metal",
+      "assumed_attenuation_db": 24.0,
+      "modeled_effective_range_cm": 3.185,
+      "farthest_reliable_read_cm": 2,
+      "overall_read_success_rate": 0.18,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "aluminum_screen",
+      "category": "conductive mesh",
+      "assumed_attenuation_db": 10.0,
+      "modeled_effective_range_cm": 5.45,
+      "farthest_reliable_read_cm": 3,
+      "overall_read_success_rate": 0.3133,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "commercial_rfid_sleeve",
+      "category": "commercial shield",
+      "assumed_attenuation_db": 32.0,
+      "modeled_effective_range_cm": 2.343,
+      "farthest_reliable_read_cm": 2,
+      "overall_read_success_rate": 0.1333,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "copper_foil",
+      "category": "solid metal",
+      "assumed_attenuation_db": 28.0,
+      "modeled_effective_range_cm": 2.732,
+      "farthest_reliable_read_cm": 2,
+      "overall_read_success_rate": 0.16,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "copper_mesh",
+      "category": "conductive mesh",
+      "assumed_attenuation_db": 12.0,
+      "modeled_effective_range_cm": 5.048,
+      "farthest_reliable_read_cm": 4,
+      "overall_read_success_rate": 0.2867,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "no_shield_control",
+      "category": "control",
+      "assumed_attenuation_db": 0.0,
+      "modeled_effective_range_cm": 8.0,
+      "farthest_reliable_read_cm": 7,
+      "overall_read_success_rate": 0.5,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "paper",
+      "category": "nonconductive control",
+      "assumed_attenuation_db": 0.2,
+      "modeled_effective_range_cm": 7.939,
+      "farthest_reliable_read_cm": 7,
+      "overall_read_success_rate": 0.5333,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "id_card",
+      "material": "steel_sheet",
+      "category": "solid metal",
+      "assumed_attenuation_db": 18.0,
+      "modeled_effective_range_cm": 4.009,
+      "farthest_reliable_read_cm": 3,
+      "overall_read_success_rate": 0.2333,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "aluminum_foil",
+      "category": "solid metal",
+      "assumed_attenuation_db": 24.0,
+      "modeled_effective_range_cm": 4.379,
+      "farthest_reliable_read_cm": 3,
+      "overall_read_success_rate": 0.2533,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "aluminum_screen",
+      "category": "conductive mesh",
+      "assumed_attenuation_db": 10.0,
+      "modeled_effective_range_cm": 7.494,
+      "farthest_reliable_read_cm": 6,
+      "overall_read_success_rate": 0.4533,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "commercial_rfid_sleeve",
+      "category": "commercial shield",
+      "assumed_attenuation_db": 32.0,
+      "modeled_effective_range_cm": 3.222,
+      "farthest_reliable_read_cm": 2,
+      "overall_read_success_rate": 0.1533,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "copper_foil",
+      "category": "solid metal",
+      "assumed_attenuation_db": 28.0,
+      "modeled_effective_range_cm": 3.756,
+      "farthest_reliable_read_cm": 3,
+      "overall_read_success_rate": 0.2267,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "copper_mesh",
+      "category": "conductive mesh",
+      "assumed_attenuation_db": 12.0,
+      "modeled_effective_range_cm": 6.941,
+      "farthest_reliable_read_cm": 4,
+      "overall_read_success_rate": 0.4267,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "no_shield_control",
+      "category": "control",
+      "assumed_attenuation_db": 0.0,
+      "modeled_effective_range_cm": 11.0,
+      "farthest_reliable_read_cm": 9,
+      "overall_read_success_rate": 0.7133,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "paper",
+      "category": "nonconductive control",
+      "assumed_attenuation_db": 0.2,
+      "modeled_effective_range_cm": 10.916,
+      "farthest_reliable_read_cm": 11,
+      "overall_read_success_rate": 0.68,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "large_card",
+      "material": "steel_sheet",
+      "category": "solid metal",
+      "assumed_attenuation_db": 18.0,
+      "modeled_effective_range_cm": 5.513,
+      "farthest_reliable_read_cm": 4,
+      "overall_read_success_rate": 0.3267,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "aluminum_foil",
+      "category": "solid metal",
+      "assumed_attenuation_db": 24.0,
+      "modeled_effective_range_cm": 1.991,
+      "farthest_reliable_read_cm": 1,
+      "overall_read_success_rate": 0.0867,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "aluminum_screen",
+      "category": "conductive mesh",
+      "assumed_attenuation_db": 10.0,
+      "modeled_effective_range_cm": 3.406,
+      "farthest_reliable_read_cm": 2,
+      "overall_read_success_rate": 0.1867,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "commercial_rfid_sleeve",
+      "category": "commercial shield",
+      "assumed_attenuation_db": 32.0,
+      "modeled_effective_range_cm": 1.464,
+      "farthest_reliable_read_cm": 1,
+      "overall_read_success_rate": 0.0733,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "copper_foil",
+      "category": "solid metal",
+      "assumed_attenuation_db": 28.0,
+      "modeled_effective_range_cm": 1.707,
+      "farthest_reliable_read_cm": 1,
+      "overall_read_success_rate": 0.08,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "copper_mesh",
+      "category": "conductive mesh",
+      "assumed_attenuation_db": 12.0,
+      "modeled_effective_range_cm": 3.155,
+      "farthest_reliable_read_cm": 2,
+      "overall_read_success_rate": 0.1667,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "no_shield_control",
+      "category": "control",
+      "assumed_attenuation_db": 0.0,
+      "modeled_effective_range_cm": 5.0,
+      "farthest_reliable_read_cm": 4,
+      "overall_read_success_rate": 0.2933,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "paper",
+      "category": "nonconductive control",
+      "assumed_attenuation_db": 0.2,
+      "modeled_effective_range_cm": 4.962,
+      "farthest_reliable_read_cm": 4,
+      "overall_read_success_rate": 0.3,
+      "trial_count": 150
+    },
+    {
+      "data_classification": "SIMULATED DATA - NOT PHYSICAL RFID MEASUREMENTS",
+      "tag": "small_key_fob",
+      "material": "steel_sheet",
+      "category": "solid metal",
+      "assumed_attenuation_db": 18.0,
+      "modeled_effective_range_cm": 2.506,
+      "farthest_reliable_read_cm": 2,
+      "overall_read_success_rate": 0.1333,
+      "trial_count": 150
+    }
+  ]
+}
