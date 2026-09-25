@@ -24,6 +24,7 @@ Do not deploy or adopt this project as a production policy without that review.
 - [Optical Air-Gap Security Lab](air-gap-optical-lab/README.md) — safe display-to-camera channel simulation, CRC validation, 1,350 reproducible trials, and a complete experimental report
 - [SQL Injection Prevention Lab](sql-injection-lab/README.md) — local SQLite parameterization experiment, bounded legacy-behavior model, 600 reproducible trials, tests, and a complete report
 - [RFID Shielding Lab](rfid-blocking-lab/README.md) — transparent near-field model, 3,600 clearly labeled simulated trials, optional physical-validation protocol, tests, and a complete report
+- [Security Questions Lab](security-questions-lab/README.md) — privacy-safe fictional-profile simulation, expectation-versus-discoverability analysis, 2,000 reproducible observations, tests, and a complete report
 
 ## File
 
