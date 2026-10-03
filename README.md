@@ -29,3 +29,27 @@ Do not deploy or adopt this project as a production policy without that review.
 ## File
 
 - `Information Security Policy.docx` — editable Word policy template
+
+## Local use
+
+Open the DOCX in Word or a compatible editor. For a simulation, enter its directory and follow its linked README; its local tests run with `python -m unittest discover -s tests -v`. Results from synthetic models do not establish production control effectiveness, physical measurements, or ISO certification.
+
+## Repository map
+
+```text
+iso-27001-information-security-policy/
+|-- .github/
+|-- .gitignore
+|-- Information Security Policy.docx
+|-- README.md
+|-- SECURITY.md
+|-- air-gap-optical-lab/
+|-- deleted-file-forensics-lab/
+|-- password-reuse-lab/
+|-- password-security-lab/
+|-- rfid-blocking-lab/
+|-- security-questions-lab/
+`-- sql-injection-lab/
+```
+
+Follow the setup and safety boundaries above before running or deploying any code.
